@@ -1,5 +1,3 @@
-# Federated-Identities
-
 # Multi-Cloud Federated Identity Solution
 
 ## Executive Summary
