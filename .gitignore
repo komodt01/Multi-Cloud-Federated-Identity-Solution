@@ -1,0 +1,427 @@
+# Multi-Cloud Federated Identity .gitignore
+
+# =====================================
+# Secrets and Credentials (NEVER COMMIT)
+# =====================================
+
+# AWS credentials and config
+.aws/
+aws-credentials.json
+*.pem
+*.p12
+*.pfx
+
+# Azure credentials and config
+.azure/
+azure-credentials.json
+*.publishsettings
+*.azureauth
+
+# GCP credentials and config
+.gcp/
+gcp-credentials.json
+service-account-key.json
+*-service-account.json
+application_default_credentials.json
+
+# Generic cloud credentials
+**/credentials
+**/credential
+**/*-key.json
+**/*-cert.pem
+**/*-private-key
+**/*.key
+**/*.crt
+**/*.p8
+
+# Environment files with secrets
+.env
+.env.local
+.env.production
+.env.staging
+.env.development
+.env.test
+*.env
+
+# =====================================
+# Temporary Files and Logs
+# =====================================
+
+# General temporary files
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Cloud CLI logs and cache
+.boto
+.gsutil
+.azure-cli/
+.aws-cli/
+.gcp-cli/
+
+# Terraform state and plans (if using IaC)
+*.tfstate
+*.tfstate.backup
+*.tfplan
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+terraform.tfvars.json
+
+# Pulumi state (if using Pulumi)
+Pulumi.*.yaml
+.pulumi/
+
+# =====================================
+# Build and Deployment Artifacts
+# =====================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+package-lock.json
+yarn.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+target/
+.gradle/
+build/
+
+# .NET
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.user
+*.suo
+*.userprefs
+packages/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+vendor/
+go.sum
+
+# Rust
+target/
+Cargo.lock
+
+# =====================================
+# IDE and Editor Files
+# =====================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# =====================================
+# Operating System Files
+# =====================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =====================================
+# Cloud-Specific Ignores
+# =====================================
+
+# AWS CloudFormation
+.aws-sam/
+samconfig.toml
+.aws-sam-cli/
+
+# AWS CDK
+cdk.out/
+cdk.context.json
+
+# Azure Resource Manager
+*.parameters.json
+*.parameters.local.json
+
+# Azure Functions
+.azure-functions-core-tools/
+local.settings.json
+
+# GCP App Engine
+.gcloudignore
+
+# Kubernetes
+*.kubeconfig
+kubeconfig
+.kube/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+docker-compose.*.yml
+
+# =====================================
+# Backup and Archive Files
+# =====================================
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*-backup
+*-old
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.tbz2
+*.tar.xz
+*.txz
+*.7z
+*.rar
+
+# =====================================
+# Documentation and Generated Files
+# =====================================
+
+# Generated documentation
+docs/_build/
+site/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# =====================================
+# Deployment-Specific Files
+# =====================================
+
+# Deployment configuration with secrets
+deploy-config.json
+deployment-secrets.yaml
+k8s-secrets.yaml
+
+# CI/CD pipeline artifacts
+.github/workflows/secrets.yml
+.gitlab-ci-secrets.yml
+.circleci/config-secrets.yml
+
+# Cloud function deployment packages
+function.zip
+deployment-package.zip
+lambda-package.zip
+
+# =====================================
+# Project-Specific Ignores
+# =====================================
+
+# Test certificates and keys (for this project)
+test-certificates/
+*.test-key
+test-*.pem
+
+# Local development overrides
+local-config.json
+dev-override.yaml
+local-*.yml
+
+# Generated policy documents
+*-policy-generated.json
+trust-policy-*.json
+inline-policy-*.json
+
+# CloudFormation generated templates
+*-template-generated.yaml
+*-stack-output.json
+
+# Test output files
+test-results/
+test-output/
+*.test-log
+
+# Performance and benchmark results
+benchmark-results/
+performance-*.log
+latency-*.csv
+
+# =====================================
+# Security Scan Results
+# =====================================
+
+# Security scan outputs
+security-scan-results/
+vulnerability-report.*
+*.sarif
+
+# Code analysis results
+sonar-project.properties
+.sonarqube/
+.scannerwork/
+
+# =====================================
+# Monitoring and Observability
+# =====================================
+
+# Local monitoring data
+monitoring-data/
+metrics-*.json
+logs-*.txt
+traces-*.json
+
+# Grafana and Prometheus config with secrets
+grafana-secrets.ini
+prometheus-secrets.yml
+
+# =====================================
+# Development and Testing
+# =====================================
+
+# Load testing results
+load-test-results/
+jmeter-results/
+*.jtl
+
+# Mock data and fixtures
+mock-data/
+test-fixtures/
+sample-tokens/
+
+# Local database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache directories
+.cache/
+.tmp/
+tmp/
+
+# =====================================
+# END OF FILE
+# =====================================
+
+# Note: This .gitignore is comprehensive for multi-cloud projects
+# Review and customize based on your specific technology stack
+# Always verify that no secrets are committed before pushing
